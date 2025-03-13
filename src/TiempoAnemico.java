@@ -4,6 +4,8 @@ import java.util.Locale;
 
 public class TiempoAnemico {
 
+    /*
+    //LO QUE HICE ORIGINALMENTE:
     public String fechaFormatoCorto (LocalDate fecha){
 
         DateTimeFormatter formatoCorto = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -20,5 +22,17 @@ public class TiempoAnemico {
 
         return fecha.format(formatoLargo);
     }
+    */
 
+    //LO QUE CORREGI
+
+    private LocalDate fecha;
+
+    public TiempoAnemico() {
+        this.fecha = LocalDate.now();
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
 }

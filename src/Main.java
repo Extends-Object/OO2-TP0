@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -20,7 +22,9 @@ public class Main {
 
 
         System.out.println(" ");
-        //UTILIZANDO UNA CLASE ANEMICA
+
+        /*
+        //UTILIZANDO UNA CLASE ANEMICA (LO QUE HICE ORIGINALMENTE)
         System.out.println("UTILIZANDO UNA CLASE ANEMICA: ");
         TiempoAnemico b = new TiempoAnemico();
         //POR QUE CONSIDERO QUE ES UNA CLASE ANEMICA:
@@ -28,6 +32,11 @@ public class Main {
         //*Por el motivo anterior, los metodos reciben instancias en cada llamada y solo pueden operar sobre estas
         System.out.println("Fecha de hoy en formato corto: " + b.fechaFormatoCorto(LocalDate.now()));
         System.out.println("Fecha de hoy en formato largo: " + b.fechaFormatoLargo(LocalDate.now()));
+        */
 
+        //UTILIZANDO UNA CLASE ANEMICA (LO QUE CORREGI)
+        TiempoAnemico b = new TiempoAnemico();
+        System.out.println("Fecha de hoy en formato corto: " + b.getFecha().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+        System.out.println("Fecha de hoy en formato largo: " + b.getFecha().format(DateTimeFormatter.ofPattern("EEEE d 'de' MMMM 'de' yyyy", new Locale("es", "ES"))));
     }
 }
