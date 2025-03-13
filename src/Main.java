@@ -20,7 +20,6 @@ public class Main {
         System.out.println("Fecha de hoy en formato corto: " + a.fechaFormatoCorto());
         System.out.println("Fecha de hoy en formato largo: " + a.fechaFormatoLargo());
 
-
         System.out.println(" ");
 
         /*
